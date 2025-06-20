@@ -1,0 +1,52 @@
+.container{
+    margin: 3% 37% 37%;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    background-color: bisque;
+}
+.box{
+    flex: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 5% 5%;
+    border-radius: 10px;
+    padding: 20px 10px;
+    
+}
+.box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+.header{
+    background-color: aqua;
+    flex:100%;
+    margin: 5% 5%;
+    border-radius: 10px;
+}
+.keyboard{
+    flex: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5% 5%;
+    gap: 5px;
+}
+.key{
+    flex: 3%;
+    background-color: rgb(43, 153, 226);
+    padding: 10%;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}

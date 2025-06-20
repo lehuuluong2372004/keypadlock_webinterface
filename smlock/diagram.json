@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "author": "Le Huu Luong",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -38.4, "left": 81.64, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -117.2,
+      "left": -349.6,
+      "attrs": {}
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -203.6, "left": 105.6, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -32.4,
+      "left": 282.2,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -32.4,
+      "left": 320.6,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": 156, "left": 261, "attrs": { "volume": "0.1" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "keypad1:R1", "esp:13", "green", [ "v48", "h220.8", "v-144" ] ],
+    [ "keypad1:R2", "esp:12", "green", [ "v38.4", "h201.2", "v-153.6" ] ],
+    [ "keypad1:R3", "esp:14", "green", [ "v28.8", "h182.1", "v-153.6" ] ],
+    [ "keypad1:R4", "esp:27", "green", [ "v19.2", "h163", "v-153.6" ] ],
+    [ "keypad1:C1", "esp:26", "green", [ "v57.6", "h191.9", "v-19.2" ] ],
+    [ "keypad1:C2", "esp:25", "green", [ "v67.2", "h192", "v-220.8" ] ],
+    [ "keypad1:C3", "esp:33", "green", [ "v76.8", "h191.85", "v-9.6" ] ],
+    [ "keypad1:C4", "esp:32", "green", [ "v86.4", "h191.7", "v-9.6" ] ],
+    [ "servo1:GND", "esp:GND.1", "black", [ "h-48", "v57.6" ] ],
+    [ "servo1:V+", "esp:5V", "green", [ "h-57.6", "v19.3" ] ],
+    [ "led1:A", "esp:2", "green", [ "v0" ] ],
+    [ "led2:A", "esp:15", "green", [ "v124.8", "h-163.2" ] ],
+    [ "esp:GND.3", "led1:C", "black", [ "h0" ] ],
+    [ "esp:GND.3", "led2:C", "black", [ "h0" ] ],
+    [ "bz1:2", "esp:16", "green", [ "v28.8", "h-67.6", "v-172.8" ] ],
+    [ "bz1:1", "esp:GND.3", "green", [ "v48", "h-67.2", "v-144" ] ],
+    [ "servo1:PWM", "esp:18", "green", [ "h-38.4", "v67.4", "h134.4", "v134.4" ] ]
+  ],
+  "dependencies": {}
+}
